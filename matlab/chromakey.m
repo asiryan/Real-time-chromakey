@@ -14,7 +14,7 @@ background = 'images/background/PANA0701_a.jpg';
 foreground = 'images/foreground/PANA0701_b.jpg';
 threshold1 = 150/255;   % object threshold
 threshold2 = 200/255;   % shadow threshold
-radius1 = 4;            % obejct blur radius
+radius1 = 4;            % object blur radius
 radius2 = 120;          % shadow blur radius
 disp('Chromakeing')
 
