@@ -6,7 +6,7 @@ MATLAB implementation of accurate real-time histogram based chroma key filter.
 The aim of this code example is to extract the green background, also called chroma key, and replace it with the background from a different image. In fact what we're doing is keying out a black and white mask from the green component of the foreground image and using it to mask.  
 
 ## MATLAB
-Download [**matlab**](matlab) source folder and open **chromakey.m** script. Define script params and run.  
+Download [**matlab**](matlab) source folder and open **chromakey.m** script. Define script params  
 ```matlab
 background = 'images/background/PANA0701_a.jpg'; % background image destination
 foreground = 'images/foreground/PANA0701_b.jpg'; % foreground image destination
@@ -15,4 +15,11 @@ threshold2 = 200/255;                            % shadow threshold (set equals 
 radius1 = 4;                                     % object blur radius
 radius2 = 120;                                   % shadow blur radius
 ```
-
+and grayscale model and run script.
+```matlab
+% PAL/NTC fgY = 0.299 * fgR + 0.587 * fgG + 0.114 * fgB;
+% AVG     fgY = 0.333 * fgR + 0.333 * fgG + 0.333 * fgB;
+% HDTV    fgY = 0.213 * fgR + 0.715 * fgG + 0.072 * fgB;
+% RYY     fgY = 0.500 * fgR + 0.419 * fgG + 0.081 * fgB;
+fgY = 0.299 * fgR + 0.587 * fgG + 0.114 * fgB;
+```
