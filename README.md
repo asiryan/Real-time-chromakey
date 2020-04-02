@@ -18,3 +18,9 @@ radius2 = 120;                                   % shadow blur radius
 ## Example
 <p align="center"><img width="50%" src="matlab/images/background/PANA0701_a.jpg"/><img width="50%" src="matlab/images/foreground/PANA0701_b.jpg"/></p>  
 <p align="center"><b>Figure 1.</b> Background and foreground images</p>  
+
+<p align="center"><img width="50%" src="docs/histogram.png" /></p>  
+<p align="center"><b>Figure 2.</b> Histogram</p>  
+
+<p align="center"><img width="50%" src="docs/mask1.png"/><img width="50%" src="docs/mask2.png"/></p>  
+<p align="center"><b>Figure 3.</b> Object and shadow masks</p>  
