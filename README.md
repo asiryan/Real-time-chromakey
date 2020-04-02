@@ -15,3 +15,5 @@ threshold2 = 200/255;                            % shadow threshold (set equals 
 radius1 = 4;                                     % object blur radius
 radius2 = 120;                                   % shadow blur radius
 ```
+<p align="center"><img width="40%" src="matlab/images/background/PANA0701_a.jpg"/><img width="40%" src="matlab/images/foreground/PANA0701_b.jpg"/></p>  
+<p align="center"><b>Figure 1.</b> Background and foreground images</p>  
