@@ -22,5 +22,5 @@ radius2 = 120;                                   % shadow blur radius
 <p align="center"><img width="50%" src="docs/histogram.png" /></p>  
 <p align="center"><b>Figure 2.</b> Histogram</p>  
 
-<p align="center"><img width="50%" src="docs/result.png" /></p>  
+<p align="center"><img width="100%" src="docs/result.png" /></p>  
 <p align="center"><b>Figure 3.</b> Blended image</p>  
