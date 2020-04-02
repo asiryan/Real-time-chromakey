@@ -8,11 +8,11 @@ The aim of this code example is to extract the green background, also called chr
 ## MATLAB
 Download [**matlab**](matlab) source folder and open **chromakey.m** script. Define script params and run.  
 ```matlab
-background = 'images/background/PANA0701_a.jpg';
-foreground = 'images/foreground/PANA0701_b.jpg';
-threshold1 = 150/255;   % object threshold
-threshold2 = 200/255;   % shadow threshold
-radius1 = 4;            % object blur radius
-radius2 = 120;          % shadow blur radius
+background = 'images/background/PANA0701_a.jpg'; % background image destination
+foreground = 'images/foreground/PANA0701_b.jpg'; % foreground image destination
+threshold1 = 150/255;                            % object threshold
+threshold2 = 200/255;                            % shadow threshold (set equals threshold1 to delete shadows or artifacts)
+radius1 = 4;                                     % object blur radius
+radius2 = 120;                                   % shadow blur radius
 ```
 
