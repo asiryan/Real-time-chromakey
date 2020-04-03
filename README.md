@@ -1,5 +1,5 @@
 # Real-time chroma key filter
-MATLAB implementation of accurate real-time histogram based chroma key filter.  
+MATLAB implementation of fast and accurate chroma key filter based on histogram.  
 
 ## Introduction
 [**Chroma key**](https://en.wikipedia.org/wiki/Chroma_key) compositing is a visual effects/post-production technique for compositing (layering) two images or video streams together based on colour hues (chroma range). The technique has been used in many fields to remove a background from the subject of a photo or video – particularly the newscasting, motion picture, and video game industries. A colour range in the foreground footage is made transparent, allowing separately filmed background footage or a static image to be inserted into the scene. The chroma keying technique is commonly used in video production and post-production.  
