@@ -24,9 +24,3 @@ radius2 = 120;                                   % box blur radius (shadow)
 
 <p align="center"><img width="100%" src="docs/result.png" /></p>  
 <p align="center"><b>Figure 3.</b> Blended image</p>  
-
-## Blue
-Change RGB-component to process blue croma key.  
-```matlab
-% fgZ = mat2gray(fgB-fgY);
-```
