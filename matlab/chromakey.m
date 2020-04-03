@@ -1,5 +1,5 @@
 %% Real-time chroma key filter
-% Accurate real-time histogram based chroma key filter.
+% Fast and accurate chroma key filter based on histogram.
 % 
 % The aim of this code example is to extract the green background, also 
 % called chroma key, and replace it with the background from a different 
@@ -31,20 +31,23 @@ fgB = fg(:,:,3); % blue  channel
 % HDTV    fgY = 0.213 * fgR + 0.715 * fgG + 0.072 * fgB;
 % RYY     fgY = 0.500 * fgR + 0.419 * fgG + 0.081 * fgB;
 fgY = 0.299 * fgR + 0.587 * fgG + 0.114 * fgB;
-fgG_Y = mat2gray(fgG-fgY);
+% R-color fgZ = mat2gray(fgR-fgY);
+% G-color fgZ = mat2gray(fgG-fgY);
+% B-color fgZ = mat2gray(fgB-fgY);
+fgZ = mat2gray(fgG-fgY);
 
 %% Plotting histogram
 figure(1);
-histo = hist(fgG_Y(:), 256);
+histo = hist(fgZ(:), 256);
 plot([0:255], histo);
 title('Histogram');
 grid on;
 
 %% Creating masks
 % Applying thresholds
-mask1 =                         (fgG_Y <= threshold1);
-mask2 = (threshold1 <= fgG_Y) & (fgG_Y <= threshold2);
-% Applying box blur
+mask1 =                       (fgZ <= threshold1);
+mask2 = (threshold1 <= fgZ) & (fgZ <= threshold2);
+% Applying box filter
 mask1 = fastboxfilter2d(mask1, radius1);
 mask2 = fastboxfilter2d(mask2, radius2);
 % Applying MATLAB box filter
