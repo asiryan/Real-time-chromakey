@@ -10,10 +10,6 @@ Download [**matlab**](matlab) source folder and open **chromakey.m** file. Defin
 ```matlab
 background = 'images/background/PANA0701_a.jpg'; % background image destination
 foreground = 'images/foreground/PANA0701_b.jpg'; % foreground image destination
-threshold1 = 150/255;                            % object threshold
-threshold2 = 200/255;                            % shadow threshold (set equals to threshold1 to remove shadow)
-radius1 = 4;                                     % box blur radius (object)
-radius2 = 120;                                   % box blur radius (shadow)
 ```
 ## Example
 <p align="center"><img width="50%" src="matlab/images/background/PANA0701_a.jpg"/><img width="50%" src="matlab/images/foreground/PANA0701_b.jpg"/></p>  
