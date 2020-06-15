@@ -14,7 +14,7 @@ foreground = 'images/foreground/PANA0701_b.jpg'; % foreground image destination
 ## Example
 This script automatically calculates optimal threshold value of histogram and applies chroma key filter to defined images.  
 ```matlab
->> chromakey
+>> chromakey_histogram
 Chromakeing
 Left point: 69
 Right point: 218
