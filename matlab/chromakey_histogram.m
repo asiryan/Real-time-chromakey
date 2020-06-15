@@ -11,8 +11,10 @@
 %% Set params
 close all;
 clear all;
-background = 'images/background/PANA0701_a.jpg';
-foreground = 'images/foreground/PANA0702_b.jpg';
+background = 'images/background/PANA0701_a.jpg'; % foreground image,
+foreground = 'images/foreground/PANA0701_b.jpg'; % background image,
+rmask      = 4;                                  % mask radius,
+rhist      = 4;                                  % histogram radius.
 disp('Chromakeing')
 
 %% Calculating matrices
@@ -37,19 +39,16 @@ imshow(fgZ);
 title('Difference');
 
 %% Processing histogram
-rhist = 4;
-bins = 256;
-histo = hist(fgZ(:),bins);
+histo = hist(fgZ(:),256);
 histo = fastboxfilter(histo,rhist);
 threshold1 = getthreshold(histo);
 
 figure(2);
 plot(histo);
-title('Logarithmic histogram');
+title('Histogram');
 grid on;
 
 %% Creating masks
-rmask = 4;
 mask = (fgZ <= threshold1);
 mask = fastboxfilter2d(mask, rmask);
 
